@@ -1,4 +1,4 @@
-import Books from "./Books";
+import Books from "./components/Books";
 
 function App() {
 	return (
