@@ -9,7 +9,7 @@ const Books = () => {
 			const res = await axios.get(
 				"https://www.googleapis.com/books/v1/volumes?q=HTML5"
 			);
-
+			setBooks(res.data.items);
 			console.log(res.data.items);
 		};
 
