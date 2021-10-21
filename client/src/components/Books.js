@@ -4,13 +4,19 @@ import axios from "axios";
 const Books = () => {
 	const [books, setBooks] = useState([]);
 
+	// Fetching data from the provided API
+
 	useEffect(() => {
 		const fetchBooks = async () => {
+			// Used axios to gain access to data object from the API
+
 			const res = await axios.get(
 				"https://www.googleapis.com/books/v1/volumes?q=HTML5"
 			);
+
+			// setBooks populates the state value
+
 			setBooks(res.data.items);
-			console.log(res.data.items);
 		};
 
 		fetchBooks();
